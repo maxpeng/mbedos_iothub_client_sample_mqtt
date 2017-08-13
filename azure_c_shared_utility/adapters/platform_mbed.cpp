@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #include "azure_c_shared_utility/platform.h"
-//#include "EthernetInterface.h"
 #include "mbed_netif.h"
 ///#include "NTPClient.h"
 #include "azure_c_shared_utility/optimize_size.h"

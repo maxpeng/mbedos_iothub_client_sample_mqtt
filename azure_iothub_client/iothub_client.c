@@ -557,8 +557,7 @@ static void ScheduleWork_Thread_ForMultiplexing(void* iotHubClientHandle)
     }
 }
 
-//static int ScheduleWork_Thread(void* threadArgument)
-static void ScheduleWork_Thread(void* threadArgument)
+static int ScheduleWork_Thread(void* threadArgument)
 {
     IOTHUB_CLIENT_INSTANCE* iotHubClientInstance = (IOTHUB_CLIENT_INSTANCE*)threadArgument;
 
@@ -602,7 +601,7 @@ static void ScheduleWork_Thread(void* threadArgument)
     }
 
     ThreadAPI_Exit(0);
-    //return 0;
+    return 0;
 }
 
 static IOTHUB_CLIENT_RESULT StartWorkerThreadIfNeeded(IOTHUB_CLIENT_INSTANCE* iotHubClientInstance)
