@@ -34,11 +34,11 @@
  *  will increase the stack usage.
  */
 //#define MBEDTLS_MPI_MAX_SIZE        256
-//
 //#define MBEDTLS_MPI_WINDOW_SIZE     1
 
+// able to connect to IoTHub after changing below 2 defines.
+// before chaning the error is "The pubkey tag or value is invalid (only RSA and EC are supported)".
 #define MBEDTLS_MPI_MAX_SIZE        512
-
 #define MBEDTLS_MPI_WINDOW_SIZE     4
 
 /*
@@ -48,4 +48,3 @@
  * typical size of records.
  */
 #define MBEDTLS_SSL_MAX_CONTENT_LEN             4096
-#
