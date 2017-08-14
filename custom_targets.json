@@ -1,8 +1,0 @@
-{
-   "MAX_BOARD": {
-       "inherits": ["NUCLEO_F429ZI"],
-       "config": {
-           "stack_size": 4096
-       }
-   }
-}
