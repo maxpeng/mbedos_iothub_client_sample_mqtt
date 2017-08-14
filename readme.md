@@ -1,11 +1,11 @@
 # Azure IoTHub MQTT Client using mbed OS 5.x
 
-This is an Azure IoTHub MQTT client example by using mbed enabled board running on latest mbed OS.
+This is an Azure IoTHub MQTT client example for mbed enabled board running on latest mbed OS.
 
 
 ## Introduction
 
-When I learned [Azure IoT Device SDK for C], I wanted to try it on a mbed enabled board running latest [mbed OS]. After searched the web, I found this  [iothub_client_sample_mqtt - a mercurial repository | Mbed](https://developer.mbed.org/users/AzureIoTClient/code/iothub_client_sample_mqtt/). However, that example uses an older version of [mbed OS] and [wolfSSL]. Since my goal is using latest [mbed OS], it also comes with another SSL/TLS library - [mbed TLS], so I also decide to switch the used SSL/TLS library to [mbed TLS].
+When I learned [Azure IoT Device SDK for C], I wanted to try it on a mbed enabled board running latest [mbed OS]. After searched the web, I found this  [iothub_client_sample_mqtt - a mercurial repository | Mbed](https://developer.mbed.org/users/AzureIoTClient/code/iothub_client_sample_mqtt/). However, that example uses an older version of [mbed OS] and [wolfSSL]. Since my goal was using latest [mbed OS], and [mbed OS] also comes with another SSL/TLS library - [mbed TLS], so I decided to modify [iothub_client_sample_mqtt - a mercurial repository | Mbed](https://developer.mbed.org/users/AzureIoTClient/code/iothub_client_sample_mqtt/) example to use [mbed OS] 5.x and switch the used SSL/TLS library to [mbed TLS].
 
 
 ## Prerequisites
