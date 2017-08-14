@@ -41,6 +41,15 @@ command to build the example.
 monitor the debug messages.
 
 
+## References:
+
+1. [Azure IoT Device SDK for C](https://github.com/Azure/azure-iot-sdk-c)
+2. [The Azure IoT device SDK for C | Microsoft Docs](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-device-sdk-c-intro)
+3. [iothub_client_sample_mqtt - a mercurial repository | Mbed](https://developer.mbed.org/users/AzureIoTClient/code/iothub_client_sample_mqtt/)
+4. [mbed OS 5 Handbook](https://docs.mbed.com/docs/mbed-os-handbook/en/latest/)
+5. [mbed TLS tutorial - Knowledge Base](https://tls.mbed.org/kb/how-to/mbedtls-tutorial)
+
+
 [Azure IoT Device SDK for C]: https://github.com/Azure/azure-iot-sdk-c
 [mbed OS]: https://developer.mbed.org/
 [wolfSSL]: https://www.wolfssl.com/wolfSSL/Products-wolfssl.html
