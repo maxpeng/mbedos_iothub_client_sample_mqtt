@@ -50,7 +50,7 @@ THREADAPI_RESULT ThreadAPI_Create(THREAD_HANDLE* threadHandle, THREAD_START_FUNC
             Thread *thrd = new Thread(osPriorityNormal, STACK_SIZE);
             if (thrd != NULL)  {
                 osStatus status = thrd->start(callback(func, arg));
-                if (status != osOK) {
+                if (status == osOK) {
                     threads[slot].thrd = thrd;
                     *threadHandle = (THREAD_HANDLE)(threads + slot);
                     result = THREADAPI_OK;
