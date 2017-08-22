@@ -1,4 +1,4 @@
-language: python
+language: C/C++python
 
 python:
   - "2.7"
@@ -17,7 +17,7 @@ before_install:
   - arm-none-eabi-gcc --version
 
 install:
-  - pip install --user mbed-cli 
+  - pip install mbed-cli 
   # Populate the mbed-os
   - mbed deploy
   - mbed new .
