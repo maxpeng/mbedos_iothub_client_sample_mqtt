@@ -32,9 +32,13 @@ To try the example, you need these:
    ```
    to the one of your device.
 3. Change the working directory to `mbedos_iothub_client_sample_mqtt`, type following
-command to build the example.
+command to build the example for `ST Nucleo F429ZI board`:
    ```sh
    mbed compile --profile azure_debug.json -t GCC_ARM -m NUCLEO_F429ZI
+   ```
+   To build the example for `NXP/Freescale K64F board`, then use this command:
+   ```sh
+   mbed compile --profile azure_debug.json -t GCC_ARM -m K64F
    ```
 4. Copy the built application `mbedos_iothub_client_sample_mqtt\BUILD\NUCLEO_F429ZI\GCC_ARM\mbedos_iothub_client_sample_mqtt.bin` to the board.
 5. Use [putty](http://www.putty.org/) to connect to the serial port of the board to
