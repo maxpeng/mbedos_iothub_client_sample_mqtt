@@ -14,4 +14,4 @@ before_install:
   - python --version
 
 install:
-  - pip install mbed-cli 
+  - pip install --user mbed-cli 
