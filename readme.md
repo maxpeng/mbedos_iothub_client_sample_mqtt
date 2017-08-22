@@ -54,3 +54,6 @@ monitor the debug messages.
 [mbed OS]: https://developer.mbed.org/
 [wolfSSL]: https://www.wolfssl.com/wolfSSL/Products-wolfssl.html
 [mbed TLS]: https://tls.mbed.org/
+
+
+[![Build Status](https://travis-ci.org/maxpeng/mbedos_iothub_client_sample_mqtt.svg?branch=master)](https://travis-ci.org/maxpeng/mbedos_iothub_client_sample_mqtt)
