@@ -6,12 +6,16 @@ script:
   - mbed compile -t GCC_ARM -m K64F --profile azure_debug.json -c
 
 before_install:
-  - sudo add-apt-repository -y ppa:team-gcc-arm-embedded/ppa
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq gcc-arm-none-eabi --force-yes
+  - mkdir ~/tools
+  - wget -P ~/tools https://armkeil.blob.core.windows.net/developer/Files/downloads/gnu-rm/6-2017q2/gcc-arm-none-eabi-6-2017-q2-update-linux.tar.bz2
+  - tar xvf -C ~/tools ~/tools/gcc-arm-none-eabi-6-2017-q2-update-linux.tar.bz2
+  - export PATH=$PATH:~/tools/gcc-arm-none-eabi-6-2017-q2-update-linux/bin
   # Print versions we use
-  - arm-none-eabi-gcc --version
   - python --version
+  - arm-none-eabi-gcc --version
 
 install:
   - pip install --user mbed-cli 
+  # Populate the mbed-os
+  - mbed deploy
+  - mbed new .
