@@ -5,6 +5,8 @@ script:
   - mbed compile -t GCC_ARM -m NUCLEO_F429ZI --profile azure_debug.json -c
   - mbed compile -t GCC_ARM -m K64F --profile azure_debug.json -c
 
+env:
+  - SH=bash
 before_install:
   - mkdir ~/tools
   - wget -P ~/tools https://armkeil.blob.core.windows.net/developer/Files/downloads/gnu-rm/6-2017q2/gcc-arm-none-eabi-6-2017-q2-update-linux.tar.bz2
