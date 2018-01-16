@@ -1,6 +1,9 @@
 // Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
-
+#ifdef UNIT_TEST
+//#if 1
+#warning "skip application main for building unit test."
+#else
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -119,7 +122,7 @@ void iothub_client_sample_mqtt_run(void)
     double avgWindSpeed = 10.0;
     double minTemperature = 20.0;
     double minHumidity = 60.0;
-    
+
     callbackCounter = 0;
     int receiveContext = 0;
 
@@ -217,7 +220,10 @@ void iothub_client_sample_mqtt_run(void)
 
 int main(void)
 {
-    set_time(1502631131);   // Aug 13, 2017, 09:30PM.
+    // need to adjust time, otherwise TLS connection will fail.
+    set_time(1516115419);   // Jan 1, 2018, 11:10PM.
     iothub_client_sample_mqtt_run();
     return 0;
 }
+
+#endif

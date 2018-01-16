@@ -6,18 +6,16 @@
 
 #include "azure_c_shared_utility/crt_abstractions.h"
 #include "azure_c_shared_utility/umock_c_prod.h"
+#include "azure_c_shared_utility/vector_types.h"
 
 #ifdef __cplusplus
 #include <cstddef>
-#include <cstdbool>
 extern "C"
 {
 #else
 #include <stddef.h>
 #include <stdbool.h>
 #endif
-
-#include "azure_c_shared_utility/vector_types.h"
 
 /* creation */
 MOCKABLE_FUNCTION(, VECTOR_HANDLE, VECTOR_create, size_t, elementSize);

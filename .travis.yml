@@ -9,9 +9,9 @@ script:
 
 before_install:
   - mkdir ~/tools
-  - wget -P ~/tools https://armkeil.blob.core.windows.net/developer/Files/downloads/gnu-rm/6-2017q2/gcc-arm-none-eabi-6-2017-q2-update-linux.tar.bz2
-  - tar xvf ~/tools/gcc-arm-none-eabi-6-2017-q2-update-linux.tar.bz2 -C ~/tools 
-  - export PATH=$PATH:~/tools/gcc-arm-none-eabi-6-2017-q2-update/bin
+  - wget -P ~/tools https://armkeil.blob.core.windows.net/developer/Files/downloads/gnu-rm/7-2017q4/gcc-arm-none-eabi-6-2017-q2-update-linux.tar.bz2
+  - tar xvf ~/tools/gcc-arm-none-eabi-7-2017-q4-update-linux.tar.bz2 -C ~/tools 
+  - export PATH=$PATH:~/tools/gcc-arm-none-eabi-7-2017-q4-update/bin
   # Print versions we use
   - python --version
   - arm-none-eabi-gcc --version

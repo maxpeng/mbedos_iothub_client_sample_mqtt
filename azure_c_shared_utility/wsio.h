@@ -4,18 +4,17 @@
 #ifndef WSIO_H
 #define WSIO_H
 
+#include "azure_c_shared_utility/xio.h"
+#include "azure_c_shared_utility/xlogging.h"
+#include "azure_c_shared_utility/umock_c_prod.h"
+
 #ifdef __cplusplus
 extern "C" {
 #include <cstddef>
-#include <cstdbool>
 #else
 #include <stddef.h>
 #include <stdbool.h>
 #endif /* __cplusplus */
-
-#include "azure_c_shared_utility/xio.h"
-#include "azure_c_shared_utility/xlogging.h"
-#include "azure_c_shared_utility/umock_c_prod.h"
 
 typedef struct WSIO_CONFIG_TAG
 {

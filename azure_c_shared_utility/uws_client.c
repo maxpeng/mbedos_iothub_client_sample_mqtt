@@ -846,7 +846,7 @@ static int ParseStringToDecimal(const char *src, int* dst)
     int result;
     char* next;
 
-    (*dst) = strtol(src, &next, 0);
+    (*dst) = (int)strtol(src, &next, 0);
     if ((src == next) || ((((*dst) == INT_MAX) || ((*dst) == INT_MIN)) && (errno != 0)))
     {
         result = __FAILURE__;
@@ -1785,7 +1785,7 @@ int uws_client_send_frame_async(UWS_CLIENT_HANDLE uws_client, unsigned char fram
                             free(ws_pending_send);
                         }
 
-			            result = __FAILURE__;
+                        result = __FAILURE__;
                     }
                     else
                     {

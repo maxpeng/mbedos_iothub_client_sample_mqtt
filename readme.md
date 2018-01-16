@@ -42,8 +42,38 @@ command to build the example for `ST Nucleo F429ZI board`:
    ```
 4. Copy the built application `mbedos_iothub_client_sample_mqtt\BUILD\NUCLEO_F429ZI\GCC_ARM\mbedos_iothub_client_sample_mqtt.bin` to the board.
 5. Use [putty](http://www.putty.org/) to connect to the serial port of the board to
-monitor the debug messages.
+monitor the debug messages. The default serial port setting is 9600 8N1.
 
+   Example of communication log:
+   ```
+   IoTHubClient_LL_SetMessageCallback...successful.
+   IoTHubClient_LL_SendEventAsync accepted message [0] for transmission to IoT Hub.
+   Info: handshake is done, result: 0x00000000.
+   -> 15:10:30 CONNECT | VER: 4 | KEEPALIVE: 240 | FLAGS: 192 | USERNAME: xxxx.azure-devices.net/devce_id/api-version=2016-11-14&DeviceClientType=iothubclient%2f1.1.29%20(mbed) | PWD: XXXX | CLEAN: 0
+   IoTHubClient_LL_SendEventAsync accepted message [1] for transmission to IoT Hub.
+   <- 15:10:31 CONNACK | SESSION_PRESENT: true | RETURN_CODE: 0x0
+   IoTHubClient_LL_SendEventAsync accepted message [2] for transmission to IoT Hub.
+   -> 15:10:31 SUBSCRIBE | PACKET_ID: 2 | TOPIC_NAME: devices/dev01/messages/devicebound/# | QOS: 1
+   IoTHubClient_LL_SendEventAsync accepted message [3] for transmission to IoT Hub.
+   IoTHubClient_LL_SendEventAsync accepted message [4] for transmission to IoT Hub.
+   -> 15:10:31 PUBLISH | IS_DUP: false | RETAIN: 0 | QOS: DELIVER_AT_LEAST_ONCE | TOPIC_NAME: devices/dev01/messages/events/temperatureAlert=false&%24.cid=CORE_ID&%24.mid=MSG_ID | PACKET_ID: 3 | PAYLOAD_LEN: 83
+   -> 15:10:31 PUBLISH | IS_DUP: false | RETAIN: 0 | QOS: DELIVER_AT_LEAST_ONCE | TOPIC_NAME: devices/dev01/messages/events/temperatureAlert=true&%24.cid=CORE_ID&%24.mid=MSG_ID | PACKET_ID: 4 | PAYLOAD_LEN: 83
+   -> 15:10:31 PUBLISH | IS_DUP: false | RETAIN: 0 | QOS: DELIVER_AT_LEAST_ONCE | TOPIC_NAME: devices/dev01/messages/events/temperatureAlert=false&%24.cid=CORE_ID&%24.mid=MSG_ID | PACKET_ID: 5 | PAYLOAD_LEN: 83
+   -> 15:10:32 PUBLISH | IS_DUP: false | RETAIN: 0 | QOS: DELIVER_AT_LEAST_ONCE | TOPIC_NAME: devices/dev01/messages/events/temperatureAlert=false&%24.cid=CORE_ID&%24.mid=MSG_ID | PACKET_ID: 6 | PAYLOAD_LEN: 83
+   -> 15:10:32 PUBLISH | IS_DUP: false | RETAIN: 0 | QOS: DELIVER_AT_LEAST_ONCE | TOPIC_NAME: devices/dev01/messages/events/temperatureAlert=true&%24.cid=CORE_ID&%24.mid=MSG_ID | PACKET_ID: 7 | PAYLOAD_LEN: 83
+   <- 15:10:32 SUBACK | PACKET_ID: 2 | RETURN_CODE: 1
+   <- 15:10:32 PUBACK | PACKET_ID: 3
+   Confirmation[0] received for message tracking id = 0 with result = IOTHUB_CLIENT_CONFIRMATION_OK
+   <- 15:10:32 PUBACK | PACKET_ID: 4
+   Confirmation[1] received for message tracking id = 1 with result = IOTHUB_CLIENT_CONFIRMATION_OK
+   <- 15:10:32 PUBACK | PACKET_ID: 5
+   Confirmation[2] received for message tracking id = 2 with result = IOTHUB_CLIENT_CONFIRMATION_OK
+   <- 15:10:33 PUBACK | PACKET_ID: 6
+   Confirmation[3] received for message tracking id = 3 with result = IOTHUB_CLIENT_CONFIRMATION_OK
+   <- 15:10:33 PUBACK | PACKET_ID: 7
+   Confirmation[4] received for message tracking id = 4 with result = IOTHUB_CLIENT_CONFIRMATION_OK
+
+   ```
 
 ## References:
 
